@@ -1,0 +1,105 @@
+@font-face {
+    font-family: figtree;
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: figtreeSemiBold;
+    src: url(./assets/fonts/static/Figtree-SemiBold.ttf);
+}
+@font-face {
+    font-family: figtreeExtraBold;
+    src: url(./assets/fonts/static/Figtree-ExtraBold.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    
+    .container {
+        background-color: hsl(47, 88%, 63%);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .card-wrapper {
+            position: relative;
+
+            .backdrop {
+                position: absolute;
+                background-color: black;
+                height: 100%;
+                width: 100%;
+                top: 0.5rem;
+                left: 0.5rem;
+            }
+
+            .backdrop, .card {
+                border-radius: 15px;
+            }
+
+            .card {
+                background-color: hsl(0, 0%, 100%);
+                border: 1px solid black;
+                width: 24rem;
+                display: flex;
+                flex-direction: column;
+                padding: 1.1rem;
+                position: relative;
+                z-index: 10;
+    
+                img {
+                    display: block;
+                    border-radius: 13px;
+                }
+    
+                .badge {
+                    align-self: start;
+                    background-color: hsl(47, 88%, 63%);
+                    padding: 4px 10px;
+                    margin-top: 1.2rem;
+                    margin-bottom: 0.8rem;
+                    border-radius: 4px;
+                    font-family: figtreeSemiBold;
+                }
+    
+                .date {
+                    display: block;
+                    font-family: figtree;
+                }
+    
+                h1 {
+                    font-family: figtreeExtraBold;
+                    font-size: 1.7rem;
+                }
+    
+                p {
+                    font-family: figtree;
+                    color: hsl(0, 0%, 42%);
+                    margin-block: 0;
+                    line-height: 1.5rem;
+                }
+    
+                .author {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 1.2rem;
+                    column-gap: 0.6rem;
+    
+                    img {
+                        width: 2.2rem;
+                    }
+    
+                    span {
+                        font-family: figtreeSemiBold;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+
+    }
+}
